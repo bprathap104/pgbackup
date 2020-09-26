@@ -2,7 +2,6 @@ from argparse import Action, ArgumentParser
 
 class DriverAction(Action):
     def __call__(self, parser, namespace, values, option_string=None):
-        print(values)
         driver, destination = values
         namespace.driver = driver.lower()
         namespace.destination = destination
